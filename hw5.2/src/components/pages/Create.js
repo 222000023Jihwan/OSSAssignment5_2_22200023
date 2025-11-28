@@ -12,7 +12,6 @@ const Create = () => {
   const [error, setError] = useState(null);
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     phone: '',
     country: '',
     job: ''
@@ -72,18 +71,6 @@ const Create = () => {
             value={formData.name}
             onChange={handleChange}
             placeholder="Enter user name"
-            required
-          />
-        </Form.Group>
-
-        <Form.Group className="mb-3">
-          <Form.Label>Email <span style={{ color: 'red' }}>*</span></Form.Label>
-          <Form.Control
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Enter email address"
             required
           />
         </Form.Group>

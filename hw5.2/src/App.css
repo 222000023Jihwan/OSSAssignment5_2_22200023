@@ -1,38 +1,386 @@
-.App {
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+#root {
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+/* ===== Container Styles ===== */
+.container {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 15px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3) !important;
+  padding: 40px !important;
+  margin-top: 40px !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ===== Heading Styles ===== */
+h2 {
+  color: #667eea !important;
+  font-weight: 700 !important;
+  margin-bottom: 30px !important;
+  text-shadow: 0 2px 4px rgba(102, 126, 234, 0.1);
+  letter-spacing: 0.5px;
+}
+
+h6 {
+  color: #764ba2 !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.3px;
+}
+
+/* ===== Button Styles ===== */
+.btn {
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+  padding: 10px 20px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #00d084 0%, #00b878 100%) !important;
+  color: white !important;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #00b878 0%, #008f5e 100%) !important;
+  color: white !important;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #6a3b8a 100%) !important;
+  color: white !important;
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #ffa500 0%, #ff8c00 100%) !important;
+  color: white !important;
+}
+
+.btn-warning:hover {
+  background: linear-gradient(135deg, #ff8c00 0%, #ff7700 100%) !important;
+  color: white !important;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%) !important;
+  color: white !important;
+}
+
+.btn-danger:hover {
+  background: linear-gradient(135deg, #ee5a6f 0%, #cc3333 100%) !important;
+  color: white !important;
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #a8b5d0 0%, #9da6c4 100%) !important;
+  color: white !important;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #9da6c4 0%, #8c95b8 100%) !important;
+  color: white !important;
+}
+
+/* ===== Link Styles ===== */
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+a:hover {
+  color: #667eea;
+}
+
+/* ===== Table Styles ===== */
+.table {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+}
+
+.table thead th {
+  border: none !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px;
+  padding: 20px !important;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.table tbody tr {
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table tbody tr:hover {
+  background-color: #f8f9ff !important;
+  transform: scale(1.01);
+}
+
+.table tbody td {
+  padding: 15px 20px !important;
+  vertical-align: middle;
+  font-weight: 500;
+}
+
+.table tbody td a {
+  color: #667eea;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.table tbody td a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* ===== Form Styles ===== */
+.form-control {
+  border: 2px solid #e0e0e0 !important;
+  border-radius: 8px !important;
+  padding: 12px 15px !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+  background: #f8f9ff !important;
+}
+
+.form-control:focus {
+  border-color: #667eea !important;
+  background: white !important;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25) !important;
+  outline: none;
+}
+
+.form-label {
+  font-weight: 600 !important;
+  color: #764ba2 !important;
+  margin-bottom: 8px !important;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+/* ===== Card Styles ===== */
+.card {
+  border: none !important;
+  border-radius: 15px !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12) !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+  overflow: hidden;
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.card-body {
+  padding: 30px !important;
+}
+
+.card-title {
+  color: #667eea !important;
+  font-weight: 700 !important;
+  font-size: 1.8rem !important;
+  margin-bottom: 25px !important;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 15px;
+}
+
+/* ===== Alert Styles ===== */
+.alert {
+  border-radius: 10px !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%) !important;
+  color: white !important;
+  border-left: 5px solid #cc3333 !important;
+}
+
+/* ===== Spinner Styles ===== */
+.spinner-border {
+  color: #667eea !important;
+  width: 3rem !important;
+  height: 3rem !important;
+  border-width: 0.35em !important;
+}
+
+/* ===== Flex Container ===== */
+.d-flex {
+  gap: 15px !important;
+}
+
+.justify-content-between {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.align-items-center {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+}
+
+.text-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ===== Spacing ===== */
+.mt-4 {
+  margin-top: 40px !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.mt-5 {
+  margin-top: 60px !important;
+}
+
+.mb-3 {
+  margin-bottom: 20px !important;
+}
+
+.mb-4 {
+  margin-bottom: 30px !important;
+}
+
+.me-2 {
+  margin-right: 10px !important;
+}
+
+/* ===== Text Utilities ===== */
+.text-muted {
+  color: #9b9b9b !important;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.fs-5 {
+  font-size: 1.1rem !important;
+  color: #555 !important;
+  font-weight: 500;
+}
+
+/* ===== Shadow Effects ===== */
+.shadow-sm {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px !important;
+    margin-top: 20px !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .btn {
+    padding: 8px 16px !important;
+    font-size: 0.9rem;
+  }
+
+  .table {
+    font-size: 0.85rem;
+  }
+
+  .table thead th,
+  .table tbody td {
+    padding: 10px !important;
+  }
+
+  .form-control {
+    padding: 10px 12px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .d-flex {
+    flex-direction: column !important;
+  }
+
+  .d-flex .btn {
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (max-width: 480px) {
+  .container {
+    padding: 15px !important;
+    border-radius: 10px;
+  }
+
+  h2 {
+    font-size: 1.2rem !important;
+  }
+
+  .card-title {
+    font-size: 1.3rem !important;
+  }
+
+  .justify-content-between {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+/* ===== Animation Keyframes ===== */
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+.container {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* ===== Focus States ===== */
+button:focus,
+a:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
 }

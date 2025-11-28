@@ -1,0 +1,39 @@
+/* Header Styles */
+.navbar-custom {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  padding: 15px 0 !important;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.brand-title {
+  font-size: 1.5rem !important;
+  font-weight: 800 !important;
+  color: rgb(0, 0, 0) !important;
+  letter-spacing: 1px;
+  transition: all 0.3s ease !important;
+}
+
+.nav-link-custom {
+  color: rgb(47, 0, 255) !important;
+  font-weight: 600 !important;
+  margin-left: 20px !important;
+  transition: all 0.3s ease !important;
+  letter-spacing: 0.5px;
+}
+
+.nav-link-custom:hover {
+  color: #ffeb3b !important;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .brand-title {
+    font-size: 1.2rem !important;
+  }
+
+  .nav-link-custom {
+    margin-left: 0 !important;
+    margin-top: 10px !important;
+  }
+}

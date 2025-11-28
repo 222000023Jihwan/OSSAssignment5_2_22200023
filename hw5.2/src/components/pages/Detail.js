@@ -51,7 +51,7 @@ const Detail = () => {
       <Container className="mt-5">
         <Alert variant="danger">{error}</Alert>
         <Button variant="secondary" onClick={handleBack}>
-          목록으로 돌아가기
+          Return
         </Button>
       </Container>
     );
@@ -62,7 +62,7 @@ const Detail = () => {
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h2>User Details</h2>
         <Button variant="secondary" size="sm" onClick={handleBack}>
-          ← 돌아가기
+          Return
         </Button>
       </div>
 

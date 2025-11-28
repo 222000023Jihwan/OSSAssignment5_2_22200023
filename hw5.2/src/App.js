@@ -1,5 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
+import List from './components/pages/List';
+import Create from './components/pages/Create';
+import Detail from './components/pages/Detail';
+import Edit from './components/pages/Edit';
 
 function NoMatch() {
   return (
@@ -12,22 +19,17 @@ function NoMatch() {
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<List />} />
+        <Route path="/create" element={<Create />} />
+        <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/update/:id" element={<Edit />} />
+        <Route path="*" element={<NoMatch />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 

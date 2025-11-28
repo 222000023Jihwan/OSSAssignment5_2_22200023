@@ -1,0 +1,75 @@
+/* Footer Styles */
+.footer-custom {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  color: white;
+  margin-top: 80px;
+  padding: 40px 0 0 0;
+  border-top: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 -4px 15px rgba(102, 126, 234, 0.2);
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffeb3b;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  color: rgba(0, 50, 251, 0.85);
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: rgba(254, 0, 0, 0.85);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  color: #ffeb3b;
+  transform: translateX(5px);
+  display: inline-block;
+}
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  margin: 0 !important;
+}
+
+.footer-bottom {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+  .footer-custom {
+    margin-top: 60px;
+    padding: 30px 0 0 0;
+  }
+
+  .footer-title {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .footer-text {
+    font-size: 0.85rem;
+  }
+}
